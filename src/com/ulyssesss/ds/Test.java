@@ -18,5 +18,6 @@ public class Test {
         l1.traversal();
         System.out.println("length: " + l1.length());
 
+        //todo 循环、高效、松散
     }
 }
