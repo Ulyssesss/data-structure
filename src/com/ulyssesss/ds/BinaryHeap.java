@@ -1,9 +1,18 @@
 package com.ulyssesss.ds;
 
+import java.util.Arrays;
+
 /**
  * 二叉堆
  */
 public class BinaryHeap {
+
+    public static void main(String[] args) {
+        BinaryHeap heap = new BinaryHeap();
+        for (int i = 15; i > 0; i--) {
+            heap.insert(i);
+        }
+    }
 
     private static final int DEFAULT_CAPACITY = 10;
 
@@ -16,9 +25,16 @@ public class BinaryHeap {
         array = new int[DEFAULT_CAPACITY];
     }
 
+    public BinaryHeap(int[] items) {
+        size = items.length;
+        array = new int[items.length * 2 + 1];
+        System.arraycopy(items, 0, array, 1, items.length);
+        buildHeap();
+    }
+
     public void insert(int x) {
         if (size == array.length - 1) {
-            enlargeArray(array.length * 2 + 1);
+            array = Arrays.copyOf(array, array.length * 2 + 1);
         }
         int hole = ++size;
         for (array[0] = x; x < array[hole / 2]; hole /= 2) {
@@ -38,6 +54,12 @@ public class BinaryHeap {
         return min;
     }
 
+    private void buildHeap() {
+        for (int i = size / 2; i > 0; i--) {
+            percolateDown(i);
+        }
+    }
+
     private void percolateDown(int hole) {
         int temp = array[hole];
         int child;
@@ -54,9 +76,5 @@ public class BinaryHeap {
             hole = child;
         }
         array[hole] = temp;
-    }
-
-    private void enlargeArray(int i) {
-        //...
     }
 }
