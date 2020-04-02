@@ -7,13 +7,6 @@ import java.util.Arrays;
  */
 public class BinaryHeap {
 
-    public static void main(String[] args) {
-        BinaryHeap heap = new BinaryHeap();
-        for (int i = 15; i > 0; i--) {
-            heap.insert(i);
-        }
-    }
-
     private static final int DEFAULT_CAPACITY = 10;
 
     private int size;
