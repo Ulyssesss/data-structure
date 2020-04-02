@@ -6,7 +6,7 @@ public class BubbleSort {
         if (n <= 1) {
             return;
         }
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 0; i < n; i++) {
             boolean finish = true;
             for (int j = 0; j < n - i - 1; j++) {
                 if (a[j + 1] < a[j]) {
