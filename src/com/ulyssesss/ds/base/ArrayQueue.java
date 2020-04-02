@@ -1,4 +1,4 @@
-package com.ulyssesss.ds;
+package com.ulyssesss.ds.base;
 
 /**
  * 队列 - 简单循环数组实现

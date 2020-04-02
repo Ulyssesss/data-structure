@@ -1,4 +1,4 @@
-package com.ulyssesss.ds;
+package com.ulyssesss.ds.base;
 
 /**
  * 队列 - 动态循环数组实现

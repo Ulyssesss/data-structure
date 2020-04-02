@@ -1,4 +1,4 @@
-package com.ulyssesss.ds;
+package com.ulyssesss.ds.base;
 
 /**
  * 栈 - 数组实现

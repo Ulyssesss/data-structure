@@ -1,4 +1,4 @@
-package com.ulyssesss.ds;
+package com.ulyssesss.ds.base;
 
 /**
  * 队列 - 链表实现 Linked List Queue
