@@ -7,7 +7,7 @@ public class MergeSort {
     }
 
     private void mergeSort(int[] a, int beginIndex, int endIndex) {
-        if (beginIndex == endIndex) {
+        if (beginIndex >= endIndex) {
             return;
         }
         int midIndex = beginIndex + (endIndex - beginIndex) / 2;
